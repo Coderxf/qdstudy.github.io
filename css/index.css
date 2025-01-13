@@ -53,7 +53,7 @@ nav.header .nav-user-wraper .nav-avatar{width:27px;height:27px;border-radius:50%
 .app-link-wrapper .link-list-d .link-a.hot{color:#F85927}
 .app-link-wrapper .link-list-d .link-a img{flex-shrink:0;width:18px;height:18px;border-radius:8px;margin-right:12px;vertical-align:middle;-o-object-fit:contain;object-fit:cover}
 .app-link-wrapper .link-list-d .link-a span{min-width:0;line-height: 17px;}
-.app-link-wrapper .link-list-d li .more{position: absolute;bottom: 0px;right: 8px;display: none;}
+.app-link-wrapper .link-list-d li .more{position: absolute;bottom: 8px;right: 8px;display: none;}
 .app-link-wrapper .link-list-d li:hover .more{display: block;} 
 .app-link-wrapper .li-often .link-btn{display:block;color:#666;font-size:12px;text-align:center;transition:color 0.2s;}
 .app-link-wrapper .li-often .link-btn i{font-size:28px;position:absolute;top:18px;left:0;right:0}

@@ -11,68 +11,26 @@ $(function () {
     beforeLoginBoxInit();
     function beforeLoginBoxInit() {
         $(".app-search-wrapper").css("background", "url(/images/bgimg_2.jpg)");
-        $("nav .nav-user-wraper").html(`<button class="pug-btn pug-btn-sm pug-btn-primary" id="login">云文档</button>\n`);
+        $("nav .nav-user-wraper").html(`<button class="pug-btn pug-btn-sm pug-btn-primary" id="login"></button>\n`);
         // 获取系统导航
         // pug.close("loadingBox");
         // $("#login").prop("disabled", true);
         let html = `<span class="fz12" style="display: block;padding: 13px;color: #155724;background: #d4edda;border-radius: 6px;text-align: center;letter-spacing: 2px;">
                         <a style="color: #155724;" href="https://fuliba.simhaoka.com/phone/index?id=93E807BA59E6D60FD701F00DA4EF67F3" target="_blank">-- 精选亲民流量卡 实时更新中  --</a>
                       </span>\n`;            
-        $("#custom_link_box").html(html);
+        $("#custom_link_box").html("");
         createAppDom(SERVR_FAIL_DEFAULT_APPS);
         setAppToc(SERVR_FAIL_DEFAULT_APPS);
         // 登录注册->云文档
         $("#login").on("click", function () {
             // loginBoxInit();
             // window.open('https://support.qq.com/products/514070/faqs-more?id=154890', '_blank');
-            window.open('https://vvan7v9l4y8.feishu.cn/wiki/', '_blank');
+            // window.open('https://vvan7v9l4y8.feishu.cn/wiki/', '_blank');
         });
     }
     /**===登录窗口初始化================================================================================================================================================== */
     function loginBoxInit() {
       // 1、添加元素到视图
-      let html = `<div class="login-wrapper">
-                      <div class="hidebg"></div>
-                      <div class="login-fixed">
-                          <div class="login-container animate__animated animate__fadeIn">
-                              <p><i class="iconfont icon-close" id="closeLoginWrapper"></i></p>
-                              <div class="main-login-container">
-                                  <h1>账号登录</h1>
-                                  <div class="l-item">
-                                      <input type="text" id="loginAccount" placeholder="请输入5-18位账号" v-model="user.account">
-                                  </div>
-                                  <div class="l-item">
-                                      <input type="password" id="loginPwd" placeholder="请输入5-18位密码" v-model="user.password">
-                                  </div>
-                                  <div class="l-item">
-                                  <button class="pug-btn pug-btn-primary pug-btn-lg fluid login">登 录</button>
-                                  </div>
-                                  <p style="text-align: center;"><a href="javascript:void(0);" class="to-reg-btn">没有账号?点我注册</a></p>
-                              </div>
-                              <div class="main-register-container">
-                                  <h1>账号注册</h1>
-                                  <div class="l-item">
-                                      <input type="text" id="regaccount" placeholder="请输入5-18位账号" v-model="user.account">
-                                  </div>
-                                  <div class="l-item">
-                                      <input type="password" id="regPwd" placeholder="请输入5-18位密码" v-model="user.password">
-                                  </div>
-                                  <div class="l-item">
-                                      <input type="password" id="regRePwd" placeholder="请确认5-18位密码" v-model="user.password">
-                                  </div>
-                                  <div class="l-item">
-                                      <button class="pug-btn pug-btn-success pug-btn-lg fluid register">注 册</button>
-                                  </div>
-                                  <p style="text-align: center;"><a href="javascript:void(0);" class="to-login-btn">已有账号?前往登录</a></p>
-                              </div>
-                              <p class="xieyi">
-                                  注册登录即表示同意<a href="javascript:void(0);">用户协议</a>
-                                  和<a href="javascript:void(0);">隐私政策</a>
-                              </p>
-                          </div>
-                      </div>
-                  </div>`;
-      $("body").append(html);
       // 取消登录窗口
       $("#closeLoginWrapper").on("click", function (e) {
         e.stopPropagation();
@@ -197,7 +155,7 @@ $(function () {
       }
       // 分享
       shareApp = function (title, url) {
-        const text = `${title}: ${url}\n来源: 星域导航`;
+        const text = `${title}: ${url}\n来源: 导航`;
         navigator.clipboard.writeText(text);
         pug.message.success("已复制到剪贴板");
       };
